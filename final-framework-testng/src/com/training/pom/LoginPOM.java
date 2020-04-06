@@ -19,16 +19,16 @@ public class LoginPOM {
 	@FindBy(id="password")
 	private WebElement password;
 	
-	@FindBy(id="formLogin_submitAuth")
+	@FindBy(id="form-login_submitAuth")
 	private WebElement loginBtn; 
 	
 	public void sendUserName(String userName) {
-		this.userName.clear();
+		//this.userName.clear();
 		this.userName.sendKeys(userName);
 	}
 	
 	public void sendPassword(String password) {
-		this.password.clear(); 
+		//this.password.clear(); 
 		this.password.sendKeys(password); 
 	}
 	

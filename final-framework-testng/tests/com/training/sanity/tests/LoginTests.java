@@ -43,13 +43,15 @@ public class LoginTests {
 	@AfterMethod
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);
-		driver.quit();
+		//driver.quit();
 	}
 	@Test
 	public void validLoginTest() {
-		loginPOM.sendUserName("admin");
-		loginPOM.sendPassword("admin@123");
+		loginPOM.sendUserName("Preeta");
+		loginPOM.sendPassword("zaq12wsxcde34rf");
 		loginPOM.clickLoginBtn(); 
-		screenShot.captureScreenShot("First");
-	}
+		//screenShot.captureScreenShot("First"); 
+	} 
+	
+	
 }

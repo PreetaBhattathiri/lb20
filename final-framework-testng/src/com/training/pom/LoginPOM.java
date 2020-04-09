@@ -35,4 +35,24 @@ public class LoginPOM {
 	public void clickLoginBtn() {
 		this.loginBtn.click(); 
 	}
+	
+	
+
+    public boolean LoginUser(String UserID,String Password)
+    {
+            try
+            {
+                    sendUserName(UserID);
+                    sendPassword(Password);
+                    clickLoginBtn();
+                    return true;
+                    
+            }
+            
+            catch(Exception ex)
+            {
+                    System.out.println(ex.getMessage());
+                    return false;
+            }
+    }
 }

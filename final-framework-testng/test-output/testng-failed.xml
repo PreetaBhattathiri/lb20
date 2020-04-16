@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.AddAssessments_ELTC_033">
+      <class name="com.training.sanity.tests.MutiUserSignUpTest_WrongInput_ELTC_62">
         <methods>
-          <include name="setUpBeforeClass"/>
-          <include name="CreateATest"/>
+          <include name="user" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="setUpBeforeClass"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.AddAssessments_ELTC_033 -->
+      </class> <!-- com.training.sanity.tests.MutiUserSignUpTest_WrongInput_ELTC_62 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

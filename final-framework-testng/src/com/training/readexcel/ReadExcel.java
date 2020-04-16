@@ -27,6 +27,7 @@ public class ReadExcel {
 				
 				arrayExcelData = new String[totalNoOfRows-1][totalNoOfCols];
 				
+				
 				for (int i= 1 ; i < totalNoOfRows; i++) 
 				{
 					for (int j=0; j < totalNoOfCols; j++) 
@@ -34,8 +35,12 @@ public class ReadExcel {
 						arrayExcelData[i-1][j] = sh.getCell(j, i).getContents();
 					}
 				}
-			}catch (IOException | BiffException e) 
-			{
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+				e.printStackTrace();
+			} catch (BiffException e) {
 				e.printStackTrace();
 			}
 			return arrayExcelData;
@@ -43,8 +48,8 @@ public class ReadExcel {
 
 	// Test method, change the path of the .xls file 
 	public static void main(String[] args) {
-		String[][] result = new ReadExcel().getExcelData("C:/Users/Naveen/Desktop/Testing.xls", "Sheet1"); 
-		
+		//String[][] result = new ReadExcel().getExcelData("C:/Users/Naveen/Desktop/Testing.xls", "Sheet1"); 
+		String[][] result = new ReadExcel().getExcelData("C:/Users/PreetaBhattathiri/Desktop/UpSkill_Selinium Automation/TestDataELTC62.xls", "Sheet1");
 		for(String [] temp : result){
 			for(String temp1: temp){
 				System.out.println(temp1);
